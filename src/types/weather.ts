@@ -21,8 +21,8 @@ export interface WeatherData {
     description: string;
     localtime: string;  
   timezone: string;
-  sunrise: any;
-  sunset: any;   
+  sunrise: string;
+  sunset: string;   
   }
   
   export interface SeasonalData {

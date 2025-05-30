@@ -12,8 +12,8 @@ export const currentWeather: CurrentWeather = {
   description: "Partly sunny with comfortable temperatures",
   localtime: '',
   timezone: '',
-  sunrise: undefined,
-  sunset: undefined
+  sunrise: '',
+  sunset: ''
 };
 
 export const weeklyForecast: WeatherData[] = [

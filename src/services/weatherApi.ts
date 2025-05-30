@@ -1,4 +1,4 @@
-import { WeatherData, CurrentWeather, SeasonalData } from '@/types/weather';
+import { WeatherData, CurrentWeather } from '@/types/weather';
 
 const RAPIDAPI_HOST = 'weatherapi-com.p.rapidapi.com';
 

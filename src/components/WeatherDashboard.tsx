@@ -8,7 +8,7 @@ import ApiKeyInput from './ApiKeyInput';
 import { currentWeather as mockCurrentWeather, weeklyForecast as mockWeeklyForecast, seasonalData } from '../data/weatherData';
 import { fetchCurrentWeather, fetchWeeklyForecast } from '../services/weatherApi';
 import { CurrentWeather, WeatherData } from '../types/weather'
-import WeatherTicker from './WeatherTicker';
+
 
 const WeatherDashboard: React.FC = () => {
   const [activeView, setActiveView] = useState<'forecast' | 'seasonal'>('forecast');
@@ -55,10 +55,10 @@ const WeatherDashboard: React.FC = () => {
     }
   };
 
-  const handleApiKeyChange = (newApiKey: string) => {
-    setApiKey(newApiKey);
-    if (newApiKey) {
-      loadWeatherData(newApiKey);
+  const handleApiKeyChange = (ApiKey: string) => {
+    setApiKey(ApiKey);
+    if (ApiKey) {
+      loadWeatherData(ApiKey);
     } else {
       // Reset to mock data when API key is cleared
       setCurrentWeather(mockCurrentWeather);
