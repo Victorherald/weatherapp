@@ -53,7 +53,7 @@ const mapConditionToLocal = (condition: string): 'sunny' | 'cloudy' | 'rainy' | 
   return 'clear';
 };
 
-export const fetchCurrentWeather = async (apiKey: string, location: string = 'Jos'): Promise<CurrentWeather> => {
+export const fetchCurrentWeather = async (apiKey: string, location: string = 'ogun'): Promise<CurrentWeather> => {
   const response = await fetch(
     `https://${RAPIDAPI_HOST}/current.json?q=${encodeURIComponent(location)}`,
     {
@@ -88,7 +88,7 @@ export const fetchCurrentWeather = async (apiKey: string, location: string = 'Jo
   };
 };
 
-export const fetchWeeklyForecast = async (apiKey: string, location: string = 'Jos'): Promise<WeatherData[]> => {
+export const fetchWeeklyForecast = async (apiKey: string, location: string = 'ogun'): Promise<WeatherData[]> => {
   const response = await fetch(
     `https://${RAPIDAPI_HOST}/forecast.json?q=${encodeURIComponent(location)}&days=7`,
     {

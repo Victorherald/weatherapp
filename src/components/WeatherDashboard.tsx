@@ -12,7 +12,7 @@ import { CurrentWeather, WeatherData } from '../types/weather'
 
 const WeatherDashboard: React.FC = () => {
   const [activeView, setActiveView] = useState<'forecast' | 'seasonal'>('forecast');
-  const [apiKey, setApiKey] = useState('');
+  const [apikey, setApiKey] = useState('');
   const [currentWeather, setCurrentWeather] = useState<CurrentWeather>(mockCurrentWeather);
   const [weeklyForecast, setWeeklyForecast] = useState<WeatherData[]>(mockWeeklyForecast);
 
@@ -115,7 +115,7 @@ const WeatherDashboard: React.FC = () => {
         {/* Error Message */}
         {error && (
           <div className="bg-red-50">
-            <p className="font-medium">Error loading weather data</p>
+            <p className="font-medium">Error loading weather data{apikey}</p>
             <p className="text-sm">{error}</p>
           </div>
         )}
