@@ -26,7 +26,7 @@ export interface WeatherData {
   }
   
   export interface SeasonalData {
-    season: 'spring' | 'summer' | 'fall' | 'winter';
+    season: 'spring' | 'summer' | 'fall' | 'winter' | 'dry' | 'wet';
     avgTemperature: number;
     avgPrecipitation: number;
     commonConditions: string[];
